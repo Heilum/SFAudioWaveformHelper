@@ -18,21 +18,20 @@ The code is derived from https://github.com/fulldecent/FDWaveformView and enligh
 ## How to use
 <pre><code>
 @IBAction func onGenerate(_ sender: Any) {
-let now = Date.timeIntervalSinceReferenceDate;
-let audioURL = Bundle.main.url(forResource: "audio", withExtension: "mp3")!;
-let scale = UIScreen.main.scale;
-let imageSizeInPixel =  CGSize(width:imageView.bounds.width * scale,height:imageView.bounds.height * scale);
-generateWaveformImage(audioURL: audioURL, imageSizeInPixel: imageSizeInPixel, waveColor: UIColor.red) {[weak self] (waveFormImage) in
-if let waveFormImage = waveFormImage {
-self?.imageView.image = waveFormImage;
-print("image.size = \(waveFormImage.size),scale=\(waveFormImage.scale)")
-self?.alert(str: "Seconds costed:\(Date.timeIntervalSinceReferenceDate - now)");
-}else{
-self?.alert(str: "Shit happens");
+    let now = Date.timeIntervalSinceReferenceDate;
+    let audioURL = Bundle.main.url(forResource: "audio", withExtension: "mp3")!;
+    let scale = UIScreen.main.scale;
+    let imageSizeInPixel =  CGSize(width:imageView.bounds.width * scale,height:imageView.bounds.height * scale);
+    generateWaveformImage(audioURL: audioURL, imageSizeInPixel: imageSizeInPixel, waveColor: UIColor.red) {[weak self] (waveFormImage) in
+        if let waveFormImage = waveFormImage {
+            self?.imageView.image = waveFormImage;
+            print("image.size = \(waveFormImage.size),scale=\(waveFormImage.scale)")
+            self?.alert(str: "Seconds costed:\(Date.timeIntervalSinceReferenceDate - now)");
+        }else{
+            self?.alert(str: "Shit happens");
+        }
+    }
 }
-}
-}
-
 </code></pre>
 
 ## License
