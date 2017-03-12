@@ -13,7 +13,7 @@ The code is derived from https://github.com/fulldecent/FDWaveformView and enligh
 
 * Using Swift 3;
 * Using Accelerate framework;
-* I keep the code as concise as I can.
+* Just a simple function calling, you get the waveform image. 
 
 ## License
 
