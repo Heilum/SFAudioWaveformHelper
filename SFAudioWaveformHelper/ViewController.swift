@@ -28,14 +28,9 @@ class ViewController: UIViewController {
         let imageSizeInPixel =  CGSize(width:imageView.bounds.width * scale,height:imageView.bounds.height * scale);
         generateWaveformImage(audioURL: audioURL, imageSizeInPixel: imageSizeInPixel, waveColor: UIColor.red) {[weak self] (waveFormImage) in
             if let waveFormImage = waveFormImage {
-            
                 self?.imageView.image = waveFormImage;
-                
                 print("image.size = \(waveFormImage.size),scale=\(waveFormImage.scale)")
-                
                 self?.alert(str: "Seconds costed:\(Date.timeIntervalSinceReferenceDate - now)");
-                
-                
             }else{
                 self?.alert(str: "Shit happens");
             }
