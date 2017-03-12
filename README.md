@@ -20,5 +20,3 @@ The code is derived from https://github.com/fulldecent/FDWaveformView and enligh
 This code is distributed under the terms and conditions of the [MIT license](LICENSE).
 
 
-
-
